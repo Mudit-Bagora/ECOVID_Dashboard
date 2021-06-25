@@ -92,16 +92,16 @@ def getmodelres(name):
     pred = results.get_prediction(start=pd.to_datetime('2017-01-01'), dynamic=False)
     pred_ci = pred.conf_int()
     vdate = pred_ci.index
-    vval = pred_ci.mean(axis =1)
+    vval = pred_ci.mean(axis = 1)
     ax = GAV['2014':]
     axdate = ax.index
     axval = np.array(ax[' Quarterly Revenues'])
 
     # Forecast result
-    prediction = results.get_forecast(steps=15)
+    prediction = results.get_forecast(steps=10)
     int_prediction = prediction.conf_int()
     fdate = int_prediction.index
-    fval = int_prediction.mean(axis =1)
+    fval = int_prediction.mean(axis = 1)
     return axdate,axval,vdate,vval,fdate,fval
         
 
@@ -153,7 +153,8 @@ def homePage(request):
 
     # model result
     axdate,axval,vdate,vval,fdate,fval = getmodelres(selected)
-    print(fdate)
+    if selected == 'Manufacturing':
+        fval = abs(fval)
     
     context = {
         'industry' : industry,

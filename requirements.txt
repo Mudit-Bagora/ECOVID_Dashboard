@@ -87,8 +87,6 @@ numba==0.48.0
 numexpr==2.7.1
 numpy==1.18.1
 packaging==20.1
-pandas==1.0.1
-pandocfilters==1.4.2
 paramiko==2.7.1
 parso==0.5.2
 partd==1.1.0

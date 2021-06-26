@@ -1,3 +1,4 @@
+whitenoise==5.1.0
 Django==3.0.6
 djangorestframework==3.11.0
 entrypoints==0.3
@@ -60,5 +61,4 @@ tqdm==4.46.1
 traitlets==4.3.3
 typing-extensions==3.7.4.2
 urllib3==1.25.9
-whitenoise==5.1.0
 xlrd==1.2.0

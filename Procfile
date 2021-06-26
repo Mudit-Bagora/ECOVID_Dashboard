@@ -1,1 +1,1 @@
-web: gunicorn secondDashboard.wsgi --log-file -
+web: gunicorn EcovidDashboard.wsgi --log-file -

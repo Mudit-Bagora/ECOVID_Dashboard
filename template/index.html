@@ -48,9 +48,9 @@
                 <span class="menu-title">Select Industry</span>
               </a>
               <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
+                <ul class="nav flex-column sub-menu" style="width: 80%;">
                   
-                  <form action="" method="post" class="form-inline" style="display: block;">
+                  <form action="" method="post" class="form-inline" style="display: block; ">
                     {% csrf_token %}
                     <select name = "selectedindustry" class="custom-select my-1 mr-sm-2" id="">
                       {% for x in industry %}
@@ -64,8 +64,7 @@
                   
                 </ul>
               </div>
-            </li>
-            
+            </li>            
             
           </ul>
         </nav>
